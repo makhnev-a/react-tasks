@@ -1,0 +1,50 @@
+.reviews {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.comment {
+    max-width: 540px;
+    flex-basis: 50%;
+    margin-left: 50px;
+    margin-bottom: 25px;
+    padding-left: 53px;
+}
+
+.comment_bubble {
+    padding: 15px;
+    max-width: 470px;
+}
+
+.comment_bubble {
+    background: #ebebeb;
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.comment_bubble:before {
+    content: "";
+    position: absolute;
+    right: 98%;
+    top: 62px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-right: 20px solid #ebebeb;
+    /*border-bottom: 12px solid transparent;*/
+}
+
+.comment_text {
+    text-align: left;
+}
+
+.comment_text:first-child {
+    margin-top: 0;
+}
+
+.comment_text:not(:first-child) {
+    margin: 0;
+}
