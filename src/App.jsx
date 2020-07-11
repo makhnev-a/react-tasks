@@ -11,7 +11,9 @@ function App() {
 
     return (
         <div className="App">
+            <h2>Task 1</h2>
             <Message/>
+            <h2>Task 2</h2>
             {qualities.map((q, index) => {
                 if (index + 1 === 2) {
                     return <span key={`qualities${index}`} className={'qualitiesSecond'}>{`${index + 1} качество = ${q}`}</span>;
