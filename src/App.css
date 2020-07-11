@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.qualities {
+  font-weight: normal;
+  padding: 5px;
+}
+
+.qualitiesSecond {
+  padding: 5px;
+  border: 1px solid red;
+  font-weight: bold;
+}
