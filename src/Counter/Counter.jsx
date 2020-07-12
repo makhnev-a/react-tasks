@@ -1,18 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {useState} from "react";
 
 const Counter = () => {
     const [num, setNum] = useState(0);
     const [title, setTitle] = useState('');
-    const titleRef = useRef();
 
     const addNum = () => {
         setNum(num + 1);
-        setTitle(titleRef.current.value);
+        alert(title);
+        setTitle('');
     };
 
-    useEffect(() => {
-        alert(title);
-    }, [title])
+    const onTitleChange = (event) => setTitle(event.currentTarget.value);
 
     return (
         <div>
@@ -20,7 +18,11 @@ const Counter = () => {
                 <span>Number - {num}</span>
             </div>
             <div>
-                <input type="text" ref={titleRef}/>
+                <input
+                    type="text"
+                    onChange={onTitleChange}
+                    value={title}
+                />
                 <button onClick={addNum}>Click</button>
             </div>
         </div>
