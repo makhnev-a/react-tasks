@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Message from "./Message/Message";
+import Counter from "./Counter/Counter";
 
 function App() {
     const qualities = [
@@ -21,6 +22,8 @@ function App() {
 
                 return <span key={`qualities${index}`} className={'qualities'}>{`${index + 1} качество = ${q}`}</span>;
             })}
+            <h2>Task 3</h2>
+            <Counter />
         </div>
     );
 }
